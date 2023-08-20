@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-gray);
+  font-family: "Lexend Deca", serif;
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+}
+
+.row {
+    display: flex;
+    width: 60vw;
+    margin: 2rem auto;
+    border-radius: 10px;
+  }
+  
+  .column {
+    padding: 2em;
+  }
+  
+  .column:nth-child(1) {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .column:nth-child(2) {
+    background-color: var(--dark-cyan);
+  }
+  
+  .column:nth-child(3) {
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+h1 {
+  font-family: "Big Shoulders Display", serif;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 1.2em 0;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 4rem;
+}
+
+a {
+  display: inline-block;
+}
+
+.cta {
+  background-color: var(--white);
+  text-decoration: none;
+  border-radius: 35px;
+  padding: 15px 35px;
+  text-transform: capitalize;
+  text-align: center;
+  border: transparent solid 2px;
+}
+
+.cta:hover {
+  color: white;
+  background-color: transparent;
+  border: var(--white) solid 2px;
+}
+
+.cta-left {
+  color: var(--bright-orange);
+}
+
+.cta-middle {
+  color: var(--dark-cyan);
+}
+
+.cta-right {
+  color: var(--very-dark-cyan);
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+  .row {
+    flex-direction: column;
+    width: 90vw;
+  }
+
+  .column:nth-child(1) {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .column:nth-child(3) {
+    border-radius: 0 0 10px 10px ;
+  }
+}
